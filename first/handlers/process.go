@@ -28,6 +28,7 @@ func HandleReadResultsByNumbersOnly(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
+	w.Header().Set("Access-Control-Allow-Origin", "*")
 	w.Header().Set("Content-Type", "application/json")
 	w.Write(jsonResponse)
 }
@@ -52,6 +53,7 @@ func HandleReadResultsByWordsAndNumbers(w http.ResponseWriter, r *http.Request) 
 		return
 	}
 
+	w.Header().Set("Access-Control-Allow-Origin", "*")
 	w.Header().Set("Content-Type", "application/json")
 	w.Write(jsonResponse)
 }

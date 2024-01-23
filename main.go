@@ -25,5 +25,5 @@ func main() {
 	router.HandleFunc("/api/v1/daythree/readByGear", HandleReadAllRatiosSum).Methods("GET")
 
 	fmt.Println("Server started on port ", 8080)
-	log.Fatal(http.ListenAndServe(":3000", router))
+	log.Fatal(http.ListenAndServe(":8080", router))
 }
